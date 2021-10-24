@@ -38,7 +38,7 @@ Muhammad Iqbal Maulana (1202190023) || Grahito Ardani Bimanta (1202199006)
 
    ![2](https://user-images.githubusercontent.com/93030868/138581385-3f5c33bb-e0e8-479a-a108-2cc994eb2a41.png)
 
-   2.  Install Lxc debian 9 dengan nama debian_php5.6
+  2.  Install Lxc debian 9 dengan nama debian_php5.6
 
       Lakukan instalasi debian 9 yang tersedia pada template kontainer ubutnu untuk memporses php5.6
 
