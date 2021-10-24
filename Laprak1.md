@@ -439,7 +439,7 @@ Muhammad Iqbal Maulana (1202190023) || Grahito Ardani Bimanta (1202199006)
 
    #### Analisa
 
-   1. - mengapa untuk kebutuhan php5.6 tidak bisa      menggunakan ubuntu 16.04, sehingga perlu diganti os ke debian 9?
+    - mengapa untuk kebutuhan php5.6 tidak bisa      menggunakan ubuntu 16.04, sehingga perlu diganti os ke debian 9?
 
         karena ubuntu 16.04 hanya tersedia untuk opsi yang berbayar yang hanya dapat diakses ubuntu estended security maintenance yang berarti ubuntu 16.04 akan dihapus karena adanya pembaruan fitur yang bernama Trusty EOL yang tidak support pada ubuntu 16.04
 
