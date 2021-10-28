@@ -450,4 +450,9 @@ Muhammad Iqbal Maulana (1202190023) || Grahito Ardani Bimanta (1202199006)
       - apa yang dimaksud dengan proxy server? kenapa vm.local bisa kita anggap sebagai proxy server?
    
         Proxy server bisa disebut computer sentral atau computer server yang bisa bertindak sebagai computer lainnya untuk yang dapat melakukan request content pada internet maupun intranet sama seperti vm.local. jadi vm.local bisa dikatakan juga sebagai proxy server
+        
+   #### Rerensi
+   https://idcloudhost.com/
+   https://www.dicoding.com/
+ 
 
