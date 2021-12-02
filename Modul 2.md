@@ -8,7 +8,7 @@
 
 Mengganti lxc_landing dan lxc_php7 dari ubuntu 18 ke ubuntu 20 yaitu ubuuntu focal
 
-![](D:\Semester5\administrasi Server\Laprak 2\1\2.PNG)
+![2](https://user-images.githubusercontent.com/93030868/144440370-fe27d730-16dc-4182-baca-85dfa4884c67.PNG)
 
 ```markdown
 sudo lxc-destroy ubuntu_landing
@@ -18,7 +18,7 @@ sudo lxc-create -n ubuntu_landing -t download -- --dist ubuntu --release focal -
 
 mengatur IP ubuntu_landing 10.0.3.103
 
-![4](D:\Semester5\administrasi Server\Laprak 2\1\4.PNG)
+![4](https://user-images.githubusercontent.com/93030868/144440377-b596321e-2588-4107-a91b-49cfa3000b61.PNG)
 
 ```markdown
 sudo lxc-start -n ubuntu_landing
@@ -29,13 +29,13 @@ netplan apply
 
 install dan setting open ssh
 
-![7](D:\Semester5\administrasi Server\Laprak 2\1\7.PNG)
+![7](https://user-images.githubusercontent.com/93030868/144440378-d802a24c-992c-4c87-aff8-8e04d4433dcb.PNG)
 
 ```markdown
 apt install openssh-server -y
 ```
 
-![8](D:\Semester5\administrasi Server\Laprak 2\1\8.PNG)
+![8](https://user-images.githubusercontent.com/93030868/144440384-9c8742dc-195c-4f37-95de-90b20ac44dfa.PNG)
 
 ```markdown
 PermitRootLogin yes
@@ -45,7 +45,7 @@ service sshd restart
 
 cek ssh apakah sudah berjalan
 
-![10](D:\Semester5\administrasi Server\Laprak 2\1\10.PNG)
+![10](https://user-images.githubusercontent.com/93030868/144440386-454181e4-66ff-4caf-a0f3-0df0a6700fb5.PNG)
 
 ```markdown
 ssh root@10.0.3.103
@@ -53,7 +53,7 @@ ssh root@10.0.3.103
 
 ubuntu7
 
-![2](D:\Semester5\administrasi Server\Laprak 2\2\2.PNG)
+![2](https://user-images.githubusercontent.com/93030868/144440514-4c7a5434-68b8-4a16-b609-aba9e2b9bbc2.PNG)
 
 ```markdown
 sudo lxc-destroy ubuntu_landing
@@ -69,7 +69,7 @@ install laravel menggunakan ansible
 
 kita harus masuk ke ansible dan membuat folder laravel
 
-![2](D:\Semester5\administrasi Server\Laprak 2\3\2.PNG)
+![2](https://user-images.githubusercontent.com/93030868/144440604-f1e1628a-9ce3-4a61-a31f-e2fadf3d7eab.PNG)
 
 ```markdown
 cd ~/ansible/
@@ -80,7 +80,7 @@ nano host
 
 membuat host untuk lxc yang akan di otomasi
 
-![3](D:\Semester5\administrasi Server\Laprak 2\3\3.PNG)
+![3](https://user-images.githubusercontent.com/93030868/144440611-1e661f2b-7f2d-45ba-8f91-feff4b97fd43.PNG)
 
 ```markdown
 ubuntu_landing ansible_host=lxc_landing.dev ansible_ssh_user=root ansible_become_pass=123zse456
@@ -88,7 +88,7 @@ ubuntu_landing ansible_host=lxc_landing.dev ansible_ssh_user=root ansible_become
 
 setelah itu mambuat drektori dan apasaja yang akan di jalan kan pada folder php dan masuk ke nginxphp.yml dan lakukan instalasi
 
-![4](D:\Semester5\administrasi Server\Laprak 2\3\4.PNG)
+![4](https://user-images.githubusercontent.com/93030868/144440616-0b08b0a6-bfad-493c-82ee-77792df3bab3.PNG)
 
 ```markdown
 ---
@@ -136,7 +136,7 @@ setelah itu mambuat drektori dan apasaja yang akan di jalan kan pada folder php 
 
 lakukan instalasi
 
-![5](D:\Semester5\administrasi Server\Laprak 2\3\5.PNG)
+![5](https://user-images.githubusercontent.com/93030868/144440620-ef661cb2-cc7b-4bf5-8b5d-69f2d9034943.PNG)
 
 ```markdown
 ansible-playbook -i hosts nginxphp.yml -k
@@ -144,7 +144,7 @@ ansible-playbook -i hosts nginxphp.yml -k
 
 buat folder installcomposer.yml
 
-![6](D:\Semester5\administrasi Server\Laprak 2\3\6.PNG)
+![6](https://user-images.githubusercontent.com/93030868/144440624-1acb4581-88e9-4d68-8a35-1de55f85d65e.PNG)
 
 ```markdown
 nano installcomposer.yml
@@ -215,7 +215,7 @@ nano installcomposer.yml
 
 lakukan instalasi 
 
-![7](D:\Semester5\administrasi Server\Laprak 2\3\7.PNG)
+![7](https://user-images.githubusercontent.com/93030868/144440629-2ba1bf33-e2e4-4196-8f9b-e5b2ab48fa0c.PNG)
 
 ```markdown
 ansible-playbook -i hosts installcomposer.yml -k
@@ -223,7 +223,7 @@ ansible-playbook -i hosts installcomposer.yml -k
 
 membuat folder config.yml dan settings
 
-![8](D:\Semester5\administrasi Server\Laprak 2\3\8.PNG)
+![8](https://user-images.githubusercontent.com/93030868/144440638-46debb1e-0a38-4d69-a1e5-4b0ae6ca0a0a.PNG)
 
 ```markdown
 nano config.yml
@@ -276,7 +276,7 @@ nano config.yml
 
 instalasi
 
-![9](D:\Semester5\administrasi Server\Laprak 2\3\9.PNG)
+![9](https://user-images.githubusercontent.com/93030868/144440644-8af45506-90da-47ac-8792-2a60ce0331dd.PNG)
 
 ```markdown
 ansible-playbook -i hosts config.yml -k
@@ -284,7 +284,7 @@ ansible-playbook -i hosts config.yml -k
 
 mengatur lxc_landing.dev
 
-![8.1](D:\Semester5\administrasi Server\Laprak 2\3\8.1.PNG)
+![8 1](https://user-images.githubusercontent.com/93030868/144440633-14dfbb1f-98fa-4f2f-a912-d62d9ff28add.PNG)
 
 ```markdown
 server {
@@ -312,7 +312,7 @@ server {
 
 instalasi sukses dan cek dengan buka vm.local
 
-![10](D:\Semester5\administrasi Server\Laprak 2\3\10.PNG)
+![10](https://user-images.githubusercontent.com/93030868/144440649-09f6de53-f073-46fe-b353-f97d56fdc83d.PNG)
 
 dan laravel sukses dijalan kan
 
@@ -320,7 +320,7 @@ dan laravel sukses dijalan kan
 
 masuk pada folder ansible/modul2-ansible dan membuat file dengan nama install-wp.yml
 
-![](D:\Semester5\administrasi Server\Laprak 2\4\1.png)
+![1](https://user-images.githubusercontent.com/93030868/144441282-d14a052d-fa94-4330-a1bc-21f3c06b6e7a.png)
 
 ```markdown
 nano install-wp.yml
@@ -333,7 +333,7 @@ nano install-wp.yml
     - wordpress
 ```
 
-![](D:\Semester5\administrasi Server\Laprak 2\4\2.png)
+![2](https://user-images.githubusercontent.com/93030868/144441295-592fbe54-6662-4006-97b7-36ecf0745823.png)
 
 lalu kita membuat direktori untuk tasks,templates dan handlers in folder wordpress dan masuk ke folder tasks untuk install paket
 
@@ -342,7 +342,7 @@ cd roles/wordpress/tasks
 nano main.yml
 ```
 
-![](D:\Semester5\administrasi Server\Laprak 2\4\3.png)
+![3](https://user-images.githubusercontent.com/93030868/144441301-aa877e7f-204b-40be-9694-06301fa58380.png)
 
 ```markdown
 ---
@@ -423,7 +423,7 @@ nano main.yml
 
 lalu masuk templates wp.conf yang merupakan configuration pada wordpress
 
-![](D:\Semester5\administrasi Server\Laprak 2\4\4.png)
+![4](https://user-images.githubusercontent.com/93030868/144441327-4b870b11-3b32-46d6-b2c7-52ffb7596b47.png)
 
 ```markdown
 cd roles/wp/templates
@@ -532,13 +532,13 @@ require_once ABSPATH . 'wp-settings.php';
 
 setelah itu masuk ke templates wordpress.conf
 
-![](D:\Semester5\administrasi Server\Laprak 2\4\5.png)
+![5](https://user-images.githubusercontent.com/93030868/144441343-91d8167f-ebef-49b1-bb9f-e52a64155531.png)
 
 nano wordpress.conf
 
 lalu kita perlu masuk ke foldeer handlers main.yml
 
-![](D:\Semester5\administrasi Server\Laprak 2\4\6.png)
+![6](https://user-images.githubusercontent.com/93030868/144441366-ea45cc00-f745-457f-8309-a7f053550725.png)
 
 ```markdown
 cd roles/wp/handlers
@@ -547,7 +547,7 @@ nano main.yml
 
 lalu jalan kan ansible untuk menginstall
 
-![](D:\Semester5\administrasi Server\Laprak 2\4\7.png)
+![7](https://user-images.githubusercontent.com/93030868/144441372-f2c8c28e-d0bb-4b3d-93a4-454cfdb4b514.png)
 
 ```markdown
 sudo ansible-playbook -i hosts install-wp.yml -k
@@ -555,13 +555,13 @@ sudo ansible-playbook -i hosts install-wp.yml -k
 
 lalu cek dengan membuka vm.local/blog/
 
-![](D:\Semester5\administrasi Server\Laprak 2\4\8.png)
+![8](https://user-images.githubusercontent.com/93030868/144441374-93cbcdac-d9a7-4e64-9b6f-be23d1de3a8f.png)
 
-![](D:\Semester5\administrasi Server\Laprak 2\4\9.png)
+![9](https://user-images.githubusercontent.com/93030868/144441376-aed9351c-24d1-4041-909b-dd33d382d0f7.png)
 
-![](D:\Semester5\administrasi Server\Laprak 2\4\10.png)
+![10](https://user-images.githubusercontent.com/93030868/144441380-baf8c9ff-b969-44d8-8b27-d4bd29915fa4.png)
 
-![](D:\Semester5\administrasi Server\Laprak 2\4\11.png)
+![11](https://user-images.githubusercontent.com/93030868/144441383-a3f7eb8a-5e3a-4771-9cf5-26ae8869f488.png)
 
 wordpress sudah dapat dijalankan
 
@@ -571,18 +571,18 @@ petama kita harus merubah dari /run/php/php7.4-fpm.sock ke 127.0.0.1:9001
 
 masuk pada folder ansible/laravel dan masuk ke lxc_landing.dev lalu membuat file soallaravel.yml
 
-![](D:\Semester5\administrasi Server\Laprak 2\soal laravel\1.PNG)
+![1](https://user-images.githubusercontent.com/93030868/144441827-3e4c8820-0bdf-4a92-84b6-f7d8c61c2a9f.PNG)
 
 ```markdown
 cd ~/ansible/laravel
 nano lxc_landing.dev
 ```
 
-![](D:\Semester5\administrasi Server\Laprak 2\soal laravel\2.PNG)
+![2](https://user-images.githubusercontent.com/93030868/144441837-ca1b9fde-ad3d-4ac1-ae02-572abe3efd8c.PNG)
 
 ganti pada fastcgi_pass dengan 127.0.0.1:9001
 
-![](D:\Semester5\administrasi Server\Laprak 2\soal laravel\3.PNG)
+![3](https://user-images.githubusercontent.com/93030868/144441840-529e8819-a251-4ea6-b270-0119880a3db7.PNG)
 
 ```markdown
 nano soallaravel.yml
@@ -590,7 +590,7 @@ nano soallaravel.yml
 
 setelah merubah template lalu kita dapat menjalankan ansible
 
-![](D:\Semester5\administrasi Server\Laprak 2\soal laravel\4.PNG)
+![4](https://user-images.githubusercontent.com/93030868/144441844-5f1a0a87-f9b9-447e-a470-8a9ca0cef2e4.PNG)
 
 ```markdown
 ansible-playbook -i hosts soallaravel.yml -k
@@ -598,26 +598,26 @@ ansible-playbook -i hosts soallaravel.yml -k
 
 lalu kita coba ke web dan berhasil
 
-![](D:\Semester5\administrasi Server\Laprak 2\soal laravel\5.PNG)
+![5](https://user-images.githubusercontent.com/93030868/144441848-62b544a2-fe7a-435c-8409-936ef0058956.PNG)
 
 ##### wordpress
 
 masuk ke folder etc/php/7.4/pool.d lalu merubah listen menjadi 127.0.0.1:9001
 
-![](D:\Semester5\administrasi Server\Laprak 2\soal wordpress\1.png)
+![1](https://user-images.githubusercontent.com/93030868/144442053-b28cc968-87a2-44cc-8f28-70aba261272f.png)
 
 ```markdown
 cd /etc/php/7.4/fpm/pool.d
 nano www.conf
 ```
 
-![](D:\Semester5\administrasi Server\Laprak 2\soal wordpress\2.png)
+![2](https://user-images.githubusercontent.com/93030868/144442062-8765fa0f-dc63-4c9b-bb15-a91cc330f2e5.png)
 
 ```markdown
 nano wordpress.conf
 ```
 
-![](D:\Semester5\administrasi Server\Laprak 2\soal wordpress\3.png)
+![3](https://user-images.githubusercontent.com/93030868/144442064-ba62a77d-27de-4f2e-9bcd-e1bbb1071ae5.png)
 
 ```markdown
 ansible-playbook -i hosts wordpress.conf -k
@@ -625,4 +625,4 @@ ansible-playbook -i hosts wordpress.conf -k
 
 lalu jalankan pada browser dan hasilnya sukses dijalankan
 
-![](D:\Semester5\administrasi Server\Laprak 2\soal wordpress\4.PNG)
+![4](https://user-images.githubusercontent.com/93030868/144442067-0bfe135c-e6a0-4616-8f79-6566509649b9.PNG)
