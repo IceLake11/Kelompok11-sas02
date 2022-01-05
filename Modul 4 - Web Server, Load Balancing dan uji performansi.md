@@ -1,6 +1,5 @@
 # Modul 4 - Web Server, Load Balancing dan uji performansi
 
-------
 
 #### Grahito Ardani B 1202199006 || M Iqbal Maulana 1202190023
 
@@ -22,7 +21,7 @@ sudo lxc-start -n debian_php5.6_3
 Sudo lxc-ls -f										                            // Menampilkan Container		
 ```
 
- ![1](https://github.com/IceLake11/Kelompok11-sas02/tree/main/assets/Modul4/app/1.PNG)
+ ![1](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/app/1.PNG)
 
 
 
