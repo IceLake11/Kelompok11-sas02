@@ -16,14 +16,14 @@ Pertama, kita lakukan terlebih dahulu salin container debian_php5.6 untuk menjag
 ```
 lxc-copy -n debian_php5.6 -N debian_php5.6_2 -sKD		 // clone container
 lxc-copy -n debian_php5.6 -N debian_php5.6_3 -sKD
-sudo lxc-start -n debian_php5.6_2						             // Jalankan Container
+sudo lxc-start -n debian_php5.6_2	          // Jalankan Container
 sudo lxc-start -n debian_php5.6_3
-Sudo lxc-ls -f										                            // Menampilkan Container		
+Sudo lxc-ls -f										// Menampilkan Container		
 ```
 
  ![1](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/app/1.PNG)
 
-
+<br>
 
 Pada Container debian_php5.6_2 lakukan configurasi IP
 
