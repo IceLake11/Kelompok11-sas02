@@ -4,7 +4,7 @@
 
 #### Grahito Ardani B 1202199006 || M Iqbal Maulana 1202190023
 
-#### Teknlogi Informasi 02-02
+#### Teknologi Informasi 02-02
 
 ------
 
@@ -17,12 +17,12 @@ Pertama, kita lakukan terlebih dahulu salin container debian_php5.6 untuk menjag
 ```
 lxc-copy -n debian_php5.6 -N debian_php5.6_2 -sKD		 // clone container
 lxc-copy -n debian_php5.6 -N debian_php5.6_3 -sKD
-sudo lxc-start -n debian_php5.6_2						// Jalankan Container
+sudo lxc-start -n debian_php5.6_2						             // Jalankan Container
 sudo lxc-start -n debian_php5.6_3
-Sudo lxc-ls -f										   // Menampilkan Container		
+Sudo lxc-ls -f										                            // Menampilkan Container		
 ```
 
- ![1](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\app\1.PNG)
+ ![1](https://github.com/IceLake11/Kelompok11-sas02/tree/main/assets/Modul4/app/1.PNG)
 
 
 
