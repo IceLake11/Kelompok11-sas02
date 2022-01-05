@@ -8,7 +8,7 @@
 ------
 
 
-
+<br>
 ### Container APP (PHP 5)
 
 Pertama, kita lakukan terlebih dahulu salin container debian_php5.6 untuk menjaga backup container. setelah itu jalankan container salinan tersebut.
@@ -27,15 +27,16 @@ Sudo lxc-ls -f										// Menampilkan Container
 
 Pada Container debian_php5.6_2 lakukan configurasi IP
 
-![2.1](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\app\2.1.PNG)
+![2.1](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/app/2.1.PNG)
 
 
+<br>
 
 Pada Container debian_php5.6_3 lakukan configurasi IP
 
-![2](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\app\2.PNG)
+![2](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/app/2.PNG)
 
-
+<br>
 
 Setelah itu, lakukan konfigurasi pada hosts. disini kita tambahkan domain serta nama domain container kita.
 
@@ -43,9 +44,9 @@ Setelah itu, lakukan konfigurasi pada hosts. disini kita tambahkan domain serta 
 nano /etc/hosts
 ```
 
- ![3](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\app\3.PNG)
+ ![3](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/app/3.PNG)
 
-
+<br>
 
 Lalu masuk directory sites-avalaible, di folder tersebut kita lakukan edit domain file tersebut dengan mengganti name servernya. jangan lupa restart containernya
 
@@ -53,9 +54,9 @@ Lalu masuk directory sites-avalaible, di folder tersebut kita lakukan edit domai
  nano /etc/nginx/sites-available/lxc_php5.dev
 ```
 
-![4](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\app\4.PNG)
+![4](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/app/4.PNG)
 
-
+<br>
 
 ### Container BLOG (PHP 7)
 
@@ -73,15 +74,15 @@ Sudo lxc-ls -f										   // Menampilkan Container
 
 Pada Container ubuntu_php7.4_2 lakukan configurasi IP
 
-![2.1](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\blog\2.1.PNG)
+![2.1](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/blog/2.1.PNG)
 
-
+<br>
 
 Pada Container ubuntu_php7.4_3 lakukan configurasi IP
 
-![2](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\blog\2.PNG)
+![2](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/blog/2.PNG)
 
-
+<br>
 
 Setelah itu, lakukan konfigurasi pada hosts. disini kita tambahkan domain serta nama domain container kita.
 
@@ -89,8 +90,9 @@ Setelah itu, lakukan konfigurasi pada hosts. disini kita tambahkan domain serta 
 nano /etc/hosts
 ```
 
-![3](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\blog\3.PNG)
+![3](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/blog/3.PNG)
 
+<br>
 
 
 Lalu masuk directory sites-avalaible, di folder tersebut kita lakukan edit domain file tersebut dengan mengganti name servernya. jangan lupa restart containernya
@@ -100,9 +102,10 @@ Lalu masuk directory sites-avalaible, di folder tersebut kita lakukan edit domai
  exit											// Keluar dari Container
 ```
 
-![4](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\blog\4.PNG)
+![4](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/blog/4.PNG)
 
-
+<br>
+<br>
 
 ### VM Utama
 
@@ -112,8 +115,9 @@ Pada VM Utama, Daftarkan semua container yang telah kita buat di hosts (Pada VM 
 Sudo Nano /etc/hosts
 ```
 
-![1](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\1.PNG)
+![1](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/1.PNG)
 
+<br>
 
 
 Lalu kita buka dan jalankan Software Jmeter, Ubah jumlah pengguna dari akses pengguna pada masing-masing user (50, 100, 150)
@@ -122,78 +126,83 @@ Lalu kita buka dan jalankan Software Jmeter, Ubah jumlah pengguna dari akses pen
 
 Tambahkan banyak User sejumlah 50 User untuk melakukan akses Website
 
-![2](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\2.PNG)
+![2](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/2.PNG)
 
-
+<br>
 
 Grafik didapatkan pada saat diakses 50 Users
 
-![3](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\3.PNG)
+![3](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/3.PNG)
 
-
+<br>
 
 Detail User yang mengakses Website
 
-![4](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\4.PNG)
+![4](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/4.PNG)
 
-
+<br>
 
 Detail website yang di akses 50 Users secara bersamaan dimasing-masing halaman landing, blog serta app
 
-![5](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\5.PNG)
+![5](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/5.PNG)
 
-
+<br>
 
 - #### 100 User
 
 Tambahkan banyak User sejumlah 100 User untuk melakukan akses Website
 
-![6](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\6.PNG)
+![6](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/6.PNG)
 
+<br>
 
 
 Grafik didapatkan pada saat diakses 100 Users
 
-![7](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\7.PNG)
+![7](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/7.PNG)
 
-
+<br>
 
 Detail User yang mengakses Website
 
-![8](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\8.PNG)
+![8](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/8.PNG)
 
-
+<br>
 
 Detail website yang di akses 100 Users secara bersamaan dimasing-masing halaman landing, blog serta app
 
-![9](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\9.PNG)
+![9](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/9.PNG)
 
+<br>
 
 
 - #### 150 User
 
 Tambahkan banyak User sejumlah 150 User untuk melakukan akses Website
 
-![10](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\10.PNG)
+![10](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/10.PNG)
 
-
+<br>
 
 Grafik didapatkan pada saat diakses 150 Users
 
-![11](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\11.PNG)
+![11](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/11.PNG)
 
+<br>
 
 
 Detail User yang mengakses Website
 
-![12](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\12.PNG)
+![12](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/12.PNG)
 
+<br>
 
 
 Detail website yang di akses 150 Users secara bersamaan dimasing-masing halaman landing, blog serta app
 
-![13](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\13.PNG)
+![13](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/13.PNG)
 
+<br>
 
 
 Lalu balik ke dalam VM kita, masuk kedalam directory file vm.local yang terletak di sites-available. tambhakan upstream pada masing-masing container (landing, php5, dan php7), lalu didalam container tersebut kita lakukan pemanggilan file domain.  
@@ -202,14 +211,16 @@ Lalu balik ke dalam VM kita, masuk kedalam directory file vm.local yang terletak
  nano /etc/nginx/sites-available/vm.local
 ```
 
-![14](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\14.PNG)
+![14](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/14.PNG)
 
+<br>
 
 
 rubah juga pada bagian url proxy_pass
 
-![15](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\15.PNG)
+![15](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/15.PNG)
 
+<br>
 
 
 Setelah melakukan perubahan pada vm kita, jangan lupa merestart vm dan buka lagi software Jmeternya. lalu kita analisa seteleh kita lakukan konfigurasi ulang dengan menambahkan load balacing upstream, apakah terdapat perubahan??
@@ -218,79 +229,86 @@ Setelah melakukan perubahan pada vm kita, jangan lupa merestart vm dan buka lagi
 
 Tambahkan banyak User sejumlah 50 User untuk melakukan akses Website  
 
-![16](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\16.PNG)
+![16](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/16.PNG)
 
+<br>
 
 
 Grafik didapatkan pada saat diakses 50 Users
 
-![17](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\17.PNG)
+![17](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/17.PNG)
 
+<br>
 
 
 Detail User yang mengakses Website
 
-![18](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\18.PNG)
+![18](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/18.PNG)
 
-
+<br>
 
 Detail website yang di akses 50 Users secara bersamaan dimasing-masing halaman landing, blog serta app
 
-![19](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\19.PNG)
+![19](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/19.PNG)
 
+<br>
 
 
 - #### 100 User menggunakan Load Balacing Upstream
 
 Tambahkan banyak User sejumlah 100 User untuk melakukan akses Website  
 
-![20](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\20.PNG)
+![20](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/20.PNG)
 
-
+<br>
 
 Grafik didapatkan pada saat diakses 100 Users
 
-![21](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\21.PNG)
+![21](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/21.PNG)
 
+<br>
 
 
 Detail User yang mengakses Website
 
-![22](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\22.PNG)
+![22](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/22.PNG)
 
+<br>
 
 
 Detail website yang di akses 100 Users secara bersamaan dimasing-masing halaman landing, blog serta app
 
-![23](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\23.PNG)
+![23](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/23.PNG)
 
+<br>
 
 
 - #### 150 User menggunakan Load Balacing Upstream
 
 Tambahkan banyak User sejumlah 150 User untuk melakukan akses Website  
 
-![24](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\24.PNG)
+![24](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/24.PNG)
 
-
+<br>
 
 Grafik didapatkan pada saat diakses 150 Users	
 
-![25](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\25.PNG)
+![25](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/25.PNG)
 
-
+<br>
 
 Detail User yang mengakses Website
 
-![26](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\26.PNG)
+![26](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/26.PNG)
 
+<br>
 
 
 Detail website yang di akses 150 Users secara bersamaan dimasing-masing halaman landing, blog serta app
 
-![27](C:\Users\ASUS X200MA\Downloads\Modul4\Modul4\27.PNG)
+![27](https://github.com/IceLake11/Kelompok11-sas02/blob/main/assets/Modul4/27.PNG)
 
-
+<br>
 
 #### <u>Analisa hasil Software Jmeter</u>
 
@@ -346,7 +364,7 @@ Rata-Rata Keseluruhan Halaman(450 Pengguna) : 1517 mdtk / 1,5 detik
 
 Dari Jumalh Pengguna(50,100,150), Disini kita dapat mengetahui bahwa rata-rata waktu pengguna mengakses web kita lebih cepat (Menggunakan Load balancer) dibandingkan jika kita tidak menggunakan load balancer. 
 
-
+<br>
 
 #### Throughput (kecepatan/rate transfer data efektif, yang diukur dalam bps).
 
