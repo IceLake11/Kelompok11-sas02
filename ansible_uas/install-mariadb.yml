@@ -1,0 +1,8 @@
+- hosts: LXC_DB_SERVER
+  vars:
+    username: 'iqbal'
+    password: 'iqbal'
+    domain: 'lxc_db_server.dev'
+  roles:
+    - db
+    - pma

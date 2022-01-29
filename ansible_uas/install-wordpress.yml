@@ -1,0 +1,11 @@
+---
+- hosts: wordpress
+  vars:
+    username: 'iqbal'
+    password: 'iqbal'
+    domain: 'lxc_php7_1.dev'
+    domain: 'lxc_php7_2.dev'
+    domain: 'lxc_php7_4.dev'
+    domain: 'lxc_php7_6.dev'
+  roles:
+    - wp

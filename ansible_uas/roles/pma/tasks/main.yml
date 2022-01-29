@@ -1,0 +1,69 @@
+- name: delete apt chache
+  become: yes
+  become_user: root
+  become_method: su
+  command: rm -vf /var/lib/apt/lists/*
+
+- name: install nginx phpmyadmin
+  become: yes
+  become_user: root
+  become_method: su
+  apt: name={{ item }} state=latest update_cache=true
+  with_items:
+    - curl
+    - nginx
+    - nginx-extras
+    - apache2
+    - php
+    - wget
+    - apache2-utils
+    - libapache2-mod-php
+    - php7.3
+    - php7.3-pdo
+    - php7.3-fpm
+    - php7.3-common
+    - php7.3-curl
+    - php7.3-xml
+    - php7.3-gd
+    - php7.3-opcache
+    - php7.3-mbstring
+    - php7.3-zip
+    - php7.3-json
+    - php7.3-cli
+    - php7.3-mysql
+    - lsb-release
+    - apt-transport-https
+    - ca-certificates
+
+- name: wget pma
+  shell: wget https://files.phpmyadmin.net/phpMyAdmin/5.1.1/phpMyAdmin-5.1.1-all-languages.tar.gz
+
+- name: stack boss
+  shell: tar -zxvf phpMyAdmin-5.1.1-all-languages.tar.gz
+
+- name: copy folder pma
+  shell: mv phpMyAdmin-5.1.1-all-languages /usr/share/phpmyadmin
+
+- name: enable module php mbstring
+  command: phpenmod mbstring
+  notify:
+    - restart php
+
+- name: Copy pma.local
+  template:
+    src=templates/pma.local
+    dest=/etc/nginx/sites-available/{{ domain }}
+  vars:
+    servername: '{{ domain }}'
+
+- name: Symlink pma.local
+  command: ln -sfn /etc/nginx/sites-available/{{ domain }} /etc/nginx/sites-enabled/{{ domain }}
+  notify:
+    - restart nginx
+
+- name: Write {{ domain }} to /etc/hosts
+  lineinfile:
+    dest: /etc/hosts
+    regexp: '.*{{ domain }}$'
+    line: "127.0.0.1 {{ domain }}"
+    state: present
