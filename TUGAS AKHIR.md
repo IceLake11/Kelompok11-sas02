@@ -200,23 +200,31 @@ lakukan grouping pada host untuk memfokuskan lxc sesuai yang diperlukan
 ###### Load Balancer
 
 lakukan load balancer pada YII, Laravel, dan Ci
+
 Least Connection
+
 * LXC_PHP7_1
 * LXC_PHP7_2
 * LXC_PHP7_4
 * LXC_PHP7_6
+
 Ip Hash
+
 * LXC_PHP7_2
 * LXC_PHP7_3
 * LXC_PHP7_4
 * LXC_PHP7_5
+
 Weighted Load Balancing
+
 * LXC_PHP7_1 (Weight=3)
 * LXC_PHP7_2 (Weight=2)
 * LXC_PHP7_4 (Weight=4)
 * LXC_PHP7_5 (Weight=1)
 * LXC_PHP7_6 (Weight=6)
+
 Round Robin
+
 * LXC_PHP5_1
 * LXC_PHP5_2
 
