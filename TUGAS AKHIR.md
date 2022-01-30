@@ -18,11 +18,11 @@ kita buat dulu LXC php5 dengan nama lxc_php5.2_1 dan lxc_php5.2_2 dan set IP mas
 
 ![1](https://user-images.githubusercontent.com/93030868/151694474-87271093-f9a0-4b44-86c8-3cde519a00e3.png)
 
-set codeigniter
+lalu kita set codeigniter untuk lxc_php5_1 dan lxc_php5_2 dengan ip yang telah kita atur
 
 ![2](https://user-images.githubusercontent.com/93030868/151694475-2eab748b-623a-47e8-864c-d6fd178ba2ae.png)
 
-lalu kita buat Ansible codeiginiter dengan nama deploy-app.yml
+lalu kita buat Ansible codeiginiter dengan nama deploy-app.yml yang berisi domain container yang kita gunakan
 
 ![3](https://user-images.githubusercontent.com/93030868/151694476-f6a99c8e-25ea-4d8f-ba72-58da3ebfc4e4.png)
 
@@ -30,7 +30,8 @@ jalankan Ansible nya
 
 ![4](https://user-images.githubusercontent.com/93030868/151694478-d84201d4-75ec-4c21-9c55-c110577d8ae3.png)
 
-Setting app/hendlers
+Buat direktori Handlers, tasks dan templates
+Setting app/hendlers yang berfungsi untuk restart
 
 ![5](https://user-images.githubusercontent.com/93030868/151694479-f67f565d-3662-4f2c-b139-459481e1a842.png)
 
@@ -46,11 +47,11 @@ lalu kita jalankan http://kelompok11.fpsas/app
 
 ![8](https://user-images.githubusercontent.com/93030868/151694482-a4bba7ca-4916-4440-a9bf-e858d864fbbc.png)
 
-kita buat 6 LXC php7 Laravel,YII dan Wordpress lalu set ip masing-masing LXC
+kita buat 6 LXC php7 yang berisi Laravel,YII dan Wordpress lalu set ip masing-masing LXC
 
 ![9](https://user-images.githubusercontent.com/93030868/151694483-56d273a2-6061-4669-b2e1-fe871c9264a7.png)
 
-sebelum melanjutkan cek dulu versi ubuntu dan debian yang kita gunakan
+sebelum melanjutkan cek dulu versi ubuntu dan debian yang kita gunakan apakah sesuai yang diminta yaitu menggunakan ubuntu 20 dan debian 10.
 
 ```markdown
 lsb_release -a
@@ -60,7 +61,7 @@ lsb_release -a
 
 ###### Laravel
 
-Set domain pada Laravel
+Set domain pada Laravel dengan membuat install-laravel.yml
 
 ![11](https://user-images.githubusercontent.com/93030868/151694486-f45ea359-dc5f-4c0d-81a4-7b4c6298f5ae.png)
 
@@ -90,13 +91,13 @@ laravel roles/lv/templates/php7.conf
 
 ![17](https://user-images.githubusercontent.com/93030868/151694493-15eba12c-267c-41f6-91e6-af9b8c5f469b.png)
 
-lalu kita jalankan laravel nya http://kelompok11.fpas/
+lalu kita jalankan laravel nya http://kelompok11.fpas/ dan laravel dapat digunakan
 
 ![18](https://user-images.githubusercontent.com/93030868/151694494-ee15b6e2-4c3a-4fa1-8287-8fa39e8a78c6.png)
 
 ###### YII
 
-set YII
+selanjut nya kita setting YII untuk kelompok11.fpsas/product
 
 Ansibel YII
 
@@ -172,13 +173,13 @@ Templates DB
 
 ![35](https://user-images.githubusercontent.com/93030868/151694512-49fa2526-c6b4-4eb9-bd95-941f9ba1b78b.png)
 
-lalu kita jalankan DB
+lalu kita jalankan DB dan database dapat dijalankan dan tersambung denagan YII
 
 ![36](https://user-images.githubusercontent.com/93030868/151694513-1c26f633-8de4-4751-baf2-c23d544eb418.png)
 
 ###### Set Host Utama
 
-kita tambahkan domain pada masing-masing container
+kita tambahkan domain pada masing-masing container dan sesuai ip yang telah kita setting pada awal instalasi
 
 ```markdown
 nano /etc/hosts
@@ -192,13 +193,32 @@ lalu kita buat semua container auto start
 
 ###### Host Grouping
 
-lakukan grouping pada host
+lakukan grouping pada host untuk memfokuskan lxc sesuai yang diperlukan
 
 ![39](https://user-images.githubusercontent.com/93030868/151694456-8768c5c6-641e-48c4-a94c-1c77aa7b25a8.png)
 
 ###### Load Balancer
 
 lakukan load balancer pada YII, Laravel, dan Ci
+Least Connection
+* LXC_PHP7_1
+* LXC_PHP7_2
+* LXC_PHP7_4
+* LXC_PHP7_6
+Ip Hash
+* LXC_PHP7_2
+* LXC_PHP7_3
+* LXC_PHP7_4
+* LXC_PHP7_5
+Weighted Load Balancing
+* LXC_PHP7_1 (Weight=3)
+* LXC_PHP7_2 (Weight=2)
+* LXC_PHP7_4 (Weight=4)
+* LXC_PHP7_5 (Weight=1)
+* LXC_PHP7_6 (Weight=6)
+Round Robin
+* LXC_PHP5_1
+* LXC_PHP5_2
 
 ```markdown
 /etc/nginx/sites-available/kelompok11.fpsas
