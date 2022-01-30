@@ -1,0 +1,8 @@
+- hosts: ci
+  vars:
+    git_url: 'https://github.com/aldonesia/sas-ci'
+    destdir: '/var/www/html/ci'
+    domain: 'lxc_php5_1.dev'
+    domain: 'lxc_php5_2.dev'
+  roles:
+    - app
