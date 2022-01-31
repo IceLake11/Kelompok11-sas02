@@ -1964,11 +1964,8 @@ lalu kita gunakan app jmeter untuk load testing
 
   ##### 3. Bagaimana cara mengurangi nilai througput dan meningkatkan nilai jumlah user yang dapat dilayani setiap detik untuk skema yang telah dibuat ? Sebutkan faktor faktor yang mempengaruhi !
 
-  Mengurangi Troughput dengan cara menambah bandwith yang kita gunakan dan untuk meningkatkan jumlah user yang dapat dilayani setiap detik dengan menambah load balance pada akses perdetik nya.
-
-  faktor yang mempengaruhi
-
   * Topologi Jaringan
+  * Penggunaan Load balance
   * Banyak nya Pengguna
   * Spesifikasi Device User Dan Server
   * Tipe Data
