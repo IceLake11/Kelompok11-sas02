@@ -1071,8 +1071,8 @@ Templates Wordpress(wp.conf)
  * @package WordPress
  */
 
-define( 'WP_HOME', 'http://kelompok11.fpsas/wp' );
-define( 'WP_SITEURL', 'http://kelompok11.fpsas/wp' );
+define( 'WP_HOME', 'http://news.kelompok11.fpsas' );
+define( 'WP_SITEURL', 'http://news.kelompok11.fpsas' );
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
